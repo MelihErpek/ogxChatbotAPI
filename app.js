@@ -94,16 +94,16 @@ app.get("/biotin", async (req, res) => {
         values: data,
       },
     }
-    (err, result) => {
-      if (err) {
-        console.error("Error writing to Google Sheets:", err);
-        res.status(500).send("Google Sheets Error");
-      } else {
-        res.status(200).send("Data added to Google Sheets");
-      }
-    }
+    // (err, result) => {
+    //   if (err) {
+    //     console.error("Error writing to Google Sheets:", err);
+    //     res.status(500).send("Google Sheets Error");
+    //   } else {
+    //     res.status(200).send("Data added to Google Sheets");
+    //   }
+    // }
   );
-  // res.json({ success: true });
+  res.json({ success: true });
 });
 app.get("/coconut", async (req, res) => {
   Product.create({
