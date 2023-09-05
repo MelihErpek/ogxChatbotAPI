@@ -68,7 +68,10 @@ app.get("/addData", (req, res) => {
     }
   );
 });
-
+app.get("/",(req,res)=>{
+  res.json({ success: true });
+    
+})
 app.get("/biotin", async (req, res) => {
   await Product.create({
     Name: "Biotin&Collagen",
